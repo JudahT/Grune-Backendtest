@@ -4,7 +4,7 @@
     <h1>Company</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">{{ $user->page_title }}</li>
+        <li class="active">{{ $company->page_title }}</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -13,7 +13,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">{{ $user->page_title }}</h3>
+                    <h3 class="box-title">{{ $company->page_title }}</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -26,33 +26,34 @@
                         </ul>
                     </div>
                     @endif
-                    {{ Form::open(array('route' => $user->form_action, 'method' => 'POST', 'files' => true, 'id' => 'user-form')) }}
-                    {{ Form::hidden('id', $user->id, array('id' => 'user_id')) }}
+                    {{ Form::open(array('route' => $company->form_action, 'method' => 'POST', 'files' => true, 'id' => 'company-form')) }}
+                    {{ Form::hidden('id', $company->id, array('id' => 'company_id')) }}
                     <div id="form-username" class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
                             <span class="label label-danger label-required">Required</span>
-                            <strong class="field-title">Username</strong>
+                            <strong class="field-title">Company name</strong>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
-                            @if($user->page_type == 'create')
-                            {{ Form::text('username', $user->username, array('class' => 'form-control validate[required, regex[/^[\w-]*$/], alpha_num, maxSize[255]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                            @if($company->page_type == 'create')
+                            {{ Form::text('username', $company->companyname, array('class' => 'form-control validate[required, regex[/^[\w-]*$/], alpha_num, maxSize[255]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
                             @else
-                            {{ Form::text('username', $user->username, array('readonly' => 'readonly', 'class' => 'form-control validate[required, regex[/^[\w-]*$/], alpha_num, maxSize[255]]')) }}
+                            {{ Form::text('username', $company->companyname, array('readonly' => 'readonly', 'class' => 'form-control validate[required, regex[/^[\w-]*$/], alpha_num, maxSize[255]]')) }}
                             @endif
                         </div>
                     </div>
-
-                    <div id="form-display-name" class="form-group {{ $user->page_type == 'edit'?'hide':'' }}">
+                    
+<!-- This is where I can add more fields that are included in backend reference images. -->
+                    <div id="form-display-name" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
                             <span class="label label-danger label-required">Required</span>
                             <strong class="field-title">Name</strong>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
-                            {{ Form::text('display_name', $user->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
                         </div>
                     </div>
 
-                    @if($user->page_type == 'create')
+                    @if($company->page_type == 'create')
                     <div id="form-password" class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
                             <span class="label label-danger label-required">Required</span>
@@ -97,7 +98,7 @@
 <!-- /.content -->
 @endsection
 
-@section('title', 'User | ' . env('APP_NAME',''))
+@section('title', 'Company | ' . env('APP_NAME',''))
 
 @section('body-class', 'custom-select')
 
@@ -109,5 +110,5 @@
 <!-- validationEngine -->
 <script src="{{ asset('js/3rdparty/validation-engine/jquery.validationEngine-en.js') }}"></script>
 <script src="{{ asset('js/3rdparty/validation-engine/jquery.validationEngine.js') }}"></script>
-<script src="{{ asset('js/backend/users/form.js') }}"></script>
+<script src="{{ asset('js/backend/companies/form.js') }}"></script>
 @endsection

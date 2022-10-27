@@ -52,3 +52,20 @@ Route::GROUP(['middleware' => ['auth:user']], function() {
     Route::POST('/admin/update', 'Backend\UserController@update')->name('admin.update');
     Route::GET('/admin/delete', 'Backend\UserController@delete')->name('admin.delete');
 });
+
+// Copying Routes from User and editing to Company.
+
+// Admin backend routes - accessible after successful login
+Route::GROUP(['middleware' => ['auth:user']], function() {
+
+    // Logout
+    Route::POST('logout', 'Auth\LoginController@logout')->name('logout');
+
+    // Admin (handles users account)
+    Route::GET('/admin', 'Backend\CompanyController@index')->name('admin');
+    Route::GET('/admin/add', 'Backend\CompanyController@add')->name('admin.add');
+    Route::POST('/admin/create', 'Backend\CompanyController@create')->name('admin.create');
+    Route::GET('/admin/edit/{id}', 'Backend\CompanyController@edit')->name('admin.edit');
+    Route::POST('/admin/update', 'Backend\CompanyController@update')->name('admin.update');
+    Route::GET('/admin/delete', 'Backend\CompanyController@delete')->name('admin.delete');
+});
