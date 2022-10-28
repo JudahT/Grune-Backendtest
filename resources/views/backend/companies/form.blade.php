@@ -41,7 +41,7 @@
                             @endif
                         </div>
                     </div>
-                    
+
 <!-- This is where I can add more fields that are included in backend reference images. -->
                     <div id="form-display-name" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">

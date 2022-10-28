@@ -62,10 +62,10 @@ Route::GROUP(['middleware' => ['auth:user']], function() {
     Route::POST('logout', 'Auth\LoginController@logout')->name('logout');
 
     // Admin (handles users account)
-    Route::GET('/admin', 'Backend\CompanyController@index')->name('admin');
-    Route::GET('/admin/add', 'Backend\CompanyController@add')->name('admin.add');
-    Route::POST('/admin/create', 'Backend\CompanyController@create')->name('admin.create');
-    Route::GET('/admin/edit/{id}', 'Backend\CompanyController@edit')->name('admin.edit');
-    Route::POST('/admin/update', 'Backend\CompanyController@update')->name('admin.update');
-    Route::GET('/admin/delete', 'Backend\CompanyController@delete')->name('admin.delete');
+    Route::GET('/admin/company', 'Backend\CompanyController@index')->name('admin.company');
+    Route::GET('/admin/company/add', 'Backend\CompanyController@add')->name('admin.company.add');
+    Route::POST('/admin/company/create', 'Backend\CompanyController@create')->name('admin.company.create');
+    Route::GET('/admin/company/edit/{id}', 'Backend\CompanyController@edit')->name('admin.company.edit');
+    Route::POST('/admin/company/update', 'Backend\CompanyController@update')->name('admin.company.update');
+    Route::GET('/admin/company/delete', 'Backend\CompanyController@delete')->name('admin.company.delete');
 });
