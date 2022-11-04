@@ -56,7 +56,7 @@
                         </div>
                     </div>
 
-                    <!-- Trying to code email -->
+                    <!-- Email input -->
                     <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
                             <span class="label label-danger label-required">Required</span>
@@ -65,6 +65,135 @@
                         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
                             {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
                         </div>
+                    </div>
+
+                    <!-- Postcode input -->
+                    <div id="form-postcode" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <span class="label label-danger label-required">Required</span>
+                            <strong class="field-title">Postcode</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-2 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                        <!-- Button for auto search and input address - change id -->
+                        <div id="form-button" class="form-group no-border">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="">
+                            <button type="search" name="search" id="send" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Prefecture input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <span class="label label-danger label-required">Required</span>
+                            <strong class="field-title">Prefecture</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- City input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <span class="label label-danger label-required">Required</span>
+                            <strong class="field-title">City</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Local input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <span class="label label-danger label-required">Required</span>
+                            <strong class="field-title">Local</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Street Address input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">Street Address</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Business Hour input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">Business Hours</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Regular Holiday input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">Regular Holiday</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Phone input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">Phone</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Fax input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">Fax</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- URL input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">URL</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => 'https://grune.co.jp', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- License Number input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <strong class="field-title">License Number</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+                    <!-- Image input -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <span class="label label-danger label-required">Required</span>
+                            <strong class="field-title">Image</strong>
+                        </div>
+                        <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-header" style="font-size : 10px; padding: 0px 0px;">Choose File</button><span>No file chosen</span>
                     </div>
 
 
