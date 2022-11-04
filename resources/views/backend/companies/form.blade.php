@@ -28,7 +28,10 @@
                     @endif
                     {{ Form::open(array('route' => $company->form_action, 'method' => 'POST', 'files' => true, 'id' => 'company-form')) }}
                     {{ Form::hidden('id', $company->id, array('id' => 'company_id')) }}
-                    <div id="form-username" class="form-group">
+
+                    <!-- Don't need company name input field -->
+
+                    <!-- <div id="form-username" class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
                             <span class="label label-danger label-required">Required</span>
                             <strong class="field-title">Company name</strong>
@@ -40,7 +43,7 @@
                             {{ Form::text('username', $company->companyname, array('readonly' => 'readonly', 'class' => 'form-control validate[required, regex[/^[\w-]*$/], alpha_num, maxSize[255]]')) }}
                             @endif
                         </div>
-                    </div>
+                    </div> -->
 
 <!-- This is where I can add more fields that are included in backend reference images. -->
                     <div id="form-display-name" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
@@ -53,7 +56,20 @@
                         </div>
                     </div>
 
-                    @if($company->page_type == 'create')
+                    <!-- Trying to code email -->
+                    <div id="form-email" class="form-group {{ $company->page_type == 'edit'?'hide':'' }}">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
+                            <span class="label label-danger label-required">Required</span>
+                            <strong class="field-title">Email</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-content">
+                            {{ Form::text('display_name', $company->display_name, array('placeholder' => '', 'class' => 'form-control validate[required, maxSize[100]]', 'data-prompt-position' => 'bottomLeft:0,11')) }}
+                        </div>
+                    </div>
+
+
+
+                    <!-- @if($company->page_type == 'create')
                     <div id="form-password" class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 col-header">
                             <span class="label label-danger label-required">Required</span>
@@ -78,7 +94,7 @@
                             <label for="show-password"><input id="show-password" type="checkbox" name="show-password" value="1"> Show Password</label>
                         </div>
                     </div>
-                    @endif
+                    @endif -->
 
                     <div id="form-button" class="form-group no-border">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="margin-top: 20px;">
