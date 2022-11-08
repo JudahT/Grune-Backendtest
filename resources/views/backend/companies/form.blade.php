@@ -11,9 +11,11 @@
 <section id="main-content" class="content">
     <div class="row">
         <div class="col-xs-12">
-            <div class="box">
+            <div class="box d-flex">
                 <div class="box-header">
                     <h3 class="box-title">{{ $company->page_title }}</h3>
+                    <!-- Need to move back button to right side -->
+                    <a href="/admin/company"><button class="btn btn-primary btn-sm">Back</button></a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -79,7 +81,7 @@
                         <!-- Button for auto search and input address - change id -->
                         <div id="form-button" class="form-group no-border">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="">
-                            <button type="search" name="search" id="send" class="btn btn-primary">Search</button>
+                            <button class="btn btn-primary">Search</button>
                         </div>
                     </div>
                     </div>
@@ -193,7 +195,8 @@
                             <span class="label label-danger label-required">Required</span>
                             <strong class="field-title">Image</strong>
                         </div>
-                        <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-header" style="font-size : 10px; padding: 0px 0px;">Choose File</button><span>No file chosen</span>
+                            <button class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-header" style="font-size : 10px; padding: 0px 0px;">Choose File</button><span>No file chosen</span>
+
                     </div>
 
 
@@ -226,7 +229,7 @@
                     @endif -->
 
                     <div id="form-button" class="form-group no-border">
-                        <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="margin-top: 20px;">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="margin-top: 20px; padding: 6px 6px;">
                             <button type="submit" name="submit" id="send" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
