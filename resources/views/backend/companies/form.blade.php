@@ -11,11 +11,11 @@
 <section id="main-content" class="content">
     <div class="row">
         <div class="col-xs-12">
-            <div class="box d-flex">
-                <div class="box-header">
+            <div class="box">
+                <div class="box-header col-xs-12">
                     <h3 class="box-title">{{ $company->page_title }}</h3>
                     <!-- Need to move back button to right side -->
-                    <a href="/admin/company"><button class="btn btn-primary btn-sm">Back</button></a>
+                    <button class="btn btn-primary btn-sm justify-content-end"><a href="/admin/company"></a>Back</button>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

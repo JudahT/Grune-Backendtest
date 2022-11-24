@@ -29,10 +29,10 @@ class CompanyController extends Controller {
     protected function validator(array $data, $type) {
         // Determine if password validation is required depending on the calling
         return Validator::make($data, [
-                'username' => 'required|string|max:255|unique:users,username,' . $data['id'],
-                'display_name' => 'required|string|max:100',
+                // 'username' => 'required|string|max:255|unique:users,username,' . $data['id'],
+                // 'display_name' => 'required|string|max:100',
                 // (update: not required, create: required)
-                'password' => 'string|min:6|max:255',
+                // 'password' => 'string|min:6|max:255',
         ]);
     }
 
